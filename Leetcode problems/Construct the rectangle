@@ -1,0 +1,15 @@
+class Solution {
+    public int[] constructRectangle(int area) {
+
+         int L = area , W = 1;
+         int res[] = new int[2];
+         while(L>=W){
+             if(area==L*W){
+                 res=new int[]{L,W};
+             }
+             W++;
+             L=area/W;
+         }
+        return res;
+    }
+}
